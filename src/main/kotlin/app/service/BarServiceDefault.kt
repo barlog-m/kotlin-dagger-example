@@ -13,6 +13,10 @@ class BarServiceDefault @Inject constructor(
     override fun bar() {
         logger.debug { "invoked" }
         val msg: String = fooService.foo()
+        printMessage(msg)
+    }
+
+    private fun printMessage(msg: String) {
         println("foo message: '$msg'")
     }
 }
