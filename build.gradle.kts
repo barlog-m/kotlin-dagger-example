@@ -25,19 +25,26 @@ val slf4jVer = "1.7.25"
 val daggerVer = "2.17"
 
 val junitJupiterVer = "5.4.1"
+val mockitoVer = "2.25.1"
 
 dependencies {
     implementation(kotlin("stdlib-jdk8"))
 //    implementation(kotlin("reflect"))
 
-    implementation("io.github.microutils:kotlin-logging:$kotlinLoggingVer")
-
     implementation("com.google.dagger:dagger:$daggerVer")
     kapt("com.google.dagger:dagger-compiler:$daggerVer")
+
+    implementation("io.github.microutils:kotlin-logging:$kotlinLoggingVer")
+    implementation("org.slf4j:slf4j-api:$slf4jVer")
+    runtime("org.apache.logging.log4j:log4j-core:$log4jVer")
+    runtime("org.apache.logging.log4j:log4j-slf4j-impl:$log4jVer")
 
     testImplementation(kotlin("test-junit5"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVer")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVer")
+
+    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVer")
+    testImplementation("org.mockito:mockito-core:$mockitoVer")
 }
 
 application {
