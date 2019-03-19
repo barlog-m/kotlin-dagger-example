@@ -43,7 +43,6 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVer")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:$junitJupiterVer")
 
-    testImplementation("org.junit.jupiter:junit-jupiter-api:$junitJupiterVer")
     testImplementation("org.mockito:mockito-core:$mockitoVer")
 }
 

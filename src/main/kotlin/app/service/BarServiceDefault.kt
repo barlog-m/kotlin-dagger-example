@@ -1,5 +1,6 @@
 package app.service
 
+import app.model.Message
 import mu.KLogging
 import javax.inject.Inject
 import javax.inject.Singleton
@@ -12,11 +13,11 @@ class BarServiceDefault @Inject constructor(
 
     override fun bar() {
         logger.debug { "invoked" }
-        val msg: String = fooService.foo()
+        val msg: Message = fooService.foo()
         printMessage(msg)
     }
 
-    private fun printMessage(msg: String) {
+    private fun printMessage(msg: Message) {
         println("foo message: '$msg'")
     }
 }

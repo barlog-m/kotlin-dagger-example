@@ -1,5 +1,7 @@
 package app.service
 
+import app.model.Message
+
 interface FooService {
-    fun foo(): String
+    fun foo(): Message
 }
